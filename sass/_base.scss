@@ -1,0 +1,62 @@
+:root {
+    //css ile bu şekilde değişken tanımlayabiliriz.
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(black, .6);
+}
+
+@keyframes button {
+    0% {
+
+        transform: translateY(3px);
+        box-shadow: 0 8px 10px rgba(black, .5);
+    }
+
+}
+
+$bp-largest: 1200px;
+$bp-large: 800px;
+$bp-medium: 630px;
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    font-size: 62.5%; // 1rem = 10px demek. 10px/16px=62.5%
+
+    @media only screen and (max-width:$bp-large) {
+        font-size: 50%;
+
+    }
+}
+
+body {
+    font-family: 'open-sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    min-height: 100vh;
+}
